@@ -7,7 +7,6 @@ on:
       - "src/**"
       - ".storybook/**"
       - "package.json"
-      - "package-lock.json"
       - ".github/workflows/storybook-pages.yml"
   workflow_dispatch:
 
@@ -28,7 +27,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
       - run: npm install
       - run: npm run typecheck
       - run: npm run build-storybook
