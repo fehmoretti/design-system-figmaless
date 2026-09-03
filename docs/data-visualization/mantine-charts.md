@@ -1,6 +1,21 @@
 # Mantine Charts
 
-Biblioteca oficial: `@mantine/charts`, integrada aos tokens Figmaless e baseada em Recharts. `accessibilityLayer` permanece habilitado por padrão.
+Biblioteca oficial: `@mantine/charts`, integrada ao tema fornecido por `figmaless-ui` e baseada em Recharts. `accessibilityLayer` permanece habilitado por padrão.
+
+## Instalação
+
+```bash
+npm install figmaless-ui @mantine/core @mantine/hooks @mantine/charts recharts
+```
+
+Importe componentes gráficos de `@mantine/charts`, não de `figmaless-ui` ou diretamente de `recharts`:
+
+```tsx
+import { LineChart } from '@mantine/charts';
+import '@mantine/charts/styles.css';
+```
+
+O import direto de Recharts exige necessidade técnica documentada e revisão, pois pode escapar dos tokens e padrões Figmaless.
 
 ## Escolha do gráfico
 

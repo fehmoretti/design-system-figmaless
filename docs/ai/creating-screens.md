@@ -6,6 +6,16 @@ Este documento é um **contrato operacional**. Deve ser incluído no contexto de
 
 Transformar requisitos de negócio em uma interface React acessível, responsiva e consistente, usando Mantine e os padrões Figmaless. A IA decide a composição da tela, mas não cria uma linguagem visual paralela.
 
+## Stack e imports obrigatórios
+
+Instale:
+
+```bash
+npm install figmaless-ui @mantine/core @mantine/hooks @mantine/charts recharts
+```
+
+Use `figmaless-ui` para tema e componentes próprios; `@mantine/core` para componentes fundamentais; `@mantine/hooks` para hooks; e `@mantine/charts` para gráficos. Recharts é o motor subjacente e não deve ser a primeira escolha de import. A IA nunca deve inventar um export de `figmaless-ui`: deve conferir a API pública do pacote.
+
 ## Contexto mínimo exigido
 
 Antes de gerar código, identifique:
@@ -153,7 +163,9 @@ A IA não deve:
 Crie ou revise esta tela usando o Design System Figmaless.
 
 Leia README.md e docs/ai/creating-screens.md antes de decidir a solução.
-Use React, Mantine e componentes/tokens já existentes.
+Use React, figmaless-ui, Mantine e os componentes/tokens já existentes.
+Instale figmaless-ui @mantine/core @mantine/hooks @mantine/charts recharts.
+Importe cada recurso do pacote responsável e não invente exports.
 Não invente valores visuais. Preserve os termos do domínio.
 Projete desktop e mobile e inclua loading, vazio, erro, sucesso e permissão quando aplicáveis.
 Atenda WCAG 2.2 AA.

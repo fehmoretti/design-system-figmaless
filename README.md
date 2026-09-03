@@ -31,18 +31,12 @@ A IA deve reutilizar componentes e tokens existentes. Não deve inventar cores, 
 ## Instalação
 
 ```bash
-npm install @figmaless/design-system @mantine/core @mantine/hooks
-```
-
-Para gráficos:
-
-```bash
-npm install @mantine/charts recharts
+npm install figmaless-ui @mantine/core @mantine/hooks @mantine/charts recharts
 ```
 
 ```tsx
 import { MantineProvider } from '@mantine/core';
-import { figmalessTheme } from '@figmaless/design-system';
+import { figmalessTheme, Button, Badge } from 'figmaless-ui';
 import '@mantine/core/styles.css';
 
 export function App() {
@@ -53,6 +47,18 @@ export function App() {
   );
 }
 ```
+
+## De onde importar
+
+| Necessidade | Pacote |
+|---|---|
+| Tema e componentes Figmaless | `figmaless-ui` |
+| Componentes Mantine | `@mantine/core` |
+| Hooks utilitários | `@mantine/hooks` |
+| Gráficos | `@mantine/charts` |
+| Motor dos gráficos | `recharts` — dependência exigida pelo Mantine Charts |
+
+Não tente importar componentes nativos do Mantine por `figmaless-ui`. A biblioteca Figmaless adiciona componentes e contratos próprios sem republicar toda a API do Mantine.
 
 ## Catálogo de componentes
 

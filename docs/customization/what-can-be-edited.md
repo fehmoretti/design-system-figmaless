@@ -48,7 +48,7 @@ A proposta deve trazer problema, casos reais, alternativa com componentes atuais
 
 ```tsx
 import { createTheme, mergeMantineTheme } from '@mantine/core';
-import { figmalessTheme } from '@figmaless/design-system';
+import { figmalessTheme } from 'figmaless-ui';
 
 const brandTheme = createTheme({
   primaryColor: 'brand',
